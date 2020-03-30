@@ -31,7 +31,7 @@ int dsize = 0;
 // Returns true if word is in dictionary else false
 bool check(const char *word)
 {
-    // case insensitive
+    // case sensitive
     int l = strlen(word);
 
     char tmp[l + 1];
@@ -42,7 +42,7 @@ bool check(const char *word)
         tmp[i] = tolower(word[i]);
     }
 
-    tmp[l + 1] = '\0';
+    tmp[l] = '\0';
 
     // take the word and hash the word
     int i = hash(tmp);
